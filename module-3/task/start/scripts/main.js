@@ -113,8 +113,40 @@ function drinkOrder(drink,size){
     console.log(strMessage);
 }
 
-drinkOrder('cola','small');
-drinkOrder('lemon','medium');
-drinkOrder('orange','large');
-drinkOrder('cola','huge')
-drinkOrder('coffee','medium');
+//drinkOrder('cola','small');
+//drinkOrder('lemon','medium');
+//drinkOrder('orange','large');
+//drinkOrder('cola','huge')
+//drinkOrder('coffee','medium');
+
+function calculator(num1,num2,operator){
+    let sum;
+    switch(operator){
+        case '+':
+            sum = num1 + num2;
+        break;
+        case '-':
+            sum = num1 - num2;
+        break;
+        case '*':
+        case 'x':
+            sum = num1 * num2;
+        break;
+        case '/':
+            sum = num1 / num2;
+        break;
+        case '%':
+            sum = num1
+        break;
+        default:
+            sum = 'You have used an invalid operator' + operator;
+        break;
+    }
+    return sum;
+}
+
+console.log(calculator(10,5,'+'))
+console.log(calculator(10,5,'-'))
+console.log(calculator(10,5,'*'))
+console.log(calculator(10,5,'/'))
+console.log(calculator(10,5,'x'))
