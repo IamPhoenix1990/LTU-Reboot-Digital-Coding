@@ -102,11 +102,11 @@ function drinkOrder(drink,size){
             strMessage += 'Schweppes';  
         break;
         case 'orange':
-            strMessage += 'you have ordered Tango';
+            strMessage += 'Tango';
         break;
         default:
             //overwriting the message when the drink can't be sold
-            strMessage = ('we do not sell'+ drink);
+            strMessage = 'we do not sell' + drink;
         break;
         }
     }
@@ -114,6 +114,7 @@ function drinkOrder(drink,size){
 }
 
 drinkOrder('cola','small');
-drinkOrder('lemon','medium')
-drinkOrder('orange','large')
-drinkOrder('coffee','huge');
+drinkOrder('lemon','medium');
+drinkOrder('orange','large');
+drinkOrder('cola','huge')
+drinkOrder('coffee','medium');
