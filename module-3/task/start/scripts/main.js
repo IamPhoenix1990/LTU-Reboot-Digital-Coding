@@ -120,7 +120,15 @@ function drinkOrder(drink,size){
 //drinkOrder('coffee','medium');
 
 function calculator(num1,num2,operator){
+    //declaring sum variable
     let sum;
+    //switch statement for operator
+    if(isNaN(num1)){
+        return 'Number1 needs to be a number';
+    }
+    if(isNaN(num2)){
+        return 'Number2 needs to be a number';
+    }
     switch(operator){
         case '+':
             sum = num1 + num2;
@@ -128,25 +136,30 @@ function calculator(num1,num2,operator){
         case '-':
             sum = num1 - num2;
         break;
-        case '*':
         case 'x':
+        case '*':
+            //two cases either * or x can be used for multiply
             sum = num1 * num2;
         break;
         case '/':
             sum = num1 / num2;
         break;
         case '%':
-            sum = num1
+            sum = num1 % num2;
         break;
         default:
-            sum = 'You have used an invalid operator' + operator;
-        break;
+            return 'You have used an invalid operator:' + operator;
     }
     return sum;
 }
 
-console.log(calculator(10,5,'+'))
-console.log(calculator(10,5,'-'))
-console.log(calculator(10,5,'*'))
-console.log(calculator(10,5,'/'))
-console.log(calculator(10,5,'x'))
+console.log(calculator(10,5,'+'));
+console.log(calculator(10,5,'-'));
+console.log(calculator(10,5,'*'));
+console.log(calculator(10,5,'/'));
+console.log(calculator(10,5,'%'));
+console.log(calculator('Zac',5,'+'));
+console.log(calculator(10,'Zac','+'));
+console.log(calculator(10,5,'Zac'));
+//NaN means not a number 
+//isNaN() function 
