@@ -86,7 +86,7 @@ function drinkOrder(drink,size){
     let blnValidated = true;
     let strMessage = ('You have ordered a') + size;
     //validating the size argument to ensure they ordered a size we can sell
-    if(size != 'small' && size != 'medium' && size != 'large'){
+    if(size != ' small ' && size != ' medium ' && size != ' large '){
         //overwriting the message when the size isn't in the logic above
         strMessage = ('you have ordered a size we do not sell:' + size);
         blnValidated = false;
@@ -96,17 +96,17 @@ function drinkOrder(drink,size){
         //creating different oututs based on the drinks argument
      switch(drink){
         case 'cola':
-            strMessage += 'Coca-cola';
+            strMessage += ' Coca-cola ';
         break;
         case 'lemon':
-            strMessage += 'Schweppes';  
+            strMessage += ' Schweppes ';  
         break;
         case 'orange':
-            strMessage += 'Tango';
+            strMessage += ' Tango ';
         break;
         default:
             //overwriting the message when the drink can't be sold
-            strMessage = 'we do not sell' + drink;
+            strMessage = ' we do not sell ' + drink ;
         break;
         }
     }
