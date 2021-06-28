@@ -154,12 +154,38 @@ function calculator(num1,num2,operator){
     return sum;
 }
 
-console.log(calculator(10,5,'+'));
-console.log(calculator(10,5,'-'));
-console.log(calculator(10,5,'*'));
-console.log(calculator(10,5,'/'));
-console.log(calculator(10,5,'%'));
-console.log(calculator('Zac',5,'+'));
-console.log(calculator(10,'Zac','+'));
-console.log(calculator(10,5,'Zac'));
+//console.log(calculator(10,5,'+'));
+//console.log(calculator(10,5,'-'));
+//console.log(calculator(10,5,'*'));
+//console.log(calculator(10,5,'/'));
+//console.log(calculator(10,5,'%'));
+//console.log(calculator('Zac',5,'+'));
+//console.log(calculator(10,'Zac','+'));
+//console.log(calculator(10,5,'Zac'));
 //NaN means not a number 
+
+function removeChar(strValue){
+
+    if(strValue.length < 4){
+    
+    return 'You must pass through a string with at least 4 characters';
+    
+    }
+    
+    if(typeof strValue != 'string'){
+    
+    return 'This function can only work if a string is passed as the argument';
+    
+    }
+    
+    let firstTrim = 1;
+    
+    let trimUpto = strValue.length - 2;
+    
+    return strValue.substr(firstTrim,trimUpto);
+    
+    }
+    
+    
+    
+    console.log(removeChar('antidisestablishmentarianism'));
