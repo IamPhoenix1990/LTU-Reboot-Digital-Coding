@@ -66,18 +66,54 @@ function fizzBuzzChecker(number){
     return strMessage;
 }
 
-console.log(fizzBuzzChecker(1));
-console.log(fizzBuzzChecker(2));
-console.log(fizzBuzzChecker(3));
-console.log(fizzBuzzChecker(4));
-console.log(fizzBuzzChecker(5));
-console.log(fizzBuzzChecker(6));
-console.log(fizzBuzzChecker(7));
-console.log(fizzBuzzChecker(8));
-console.log(fizzBuzzChecker(9));
-console.log(fizzBuzzChecker(10));
-console.log(fizzBuzzChecker(11));
-console.log(fizzBuzzChecker(12));
-console.log(fizzBuzzChecker(13));
-console.log(fizzBuzzChecker(14));
-console.log(fizzBuzzChecker(15));
+//console.log(fizzBuzzChecker(1));
+//console.log(fizzBuzzChecker(2));
+//console.log(fizzBuzzChecker(3));
+//console.log(fizzBuzzChecker(4));
+//console.log(fizzBuzzChecker(5));
+//console.log(fizzBuzzChecker(6));
+//console.log(fizzBuzzChecker(7));
+//console.log(fizzBuzzChecker(8));
+//console.log(fizzBuzzChecker(9));
+//console.log(fizzBuzzChecker(10));
+//console.log(fizzBuzzChecker(11));
+//console.log(fizzBuzzChecker(12));
+//console.log(fizzBuzzChecker(13));
+//console.log(fizzBuzzChecker(14));
+//console.log(fizzBuzzChecker(15));
+
+function drinkOrder(drink,size){
+    let blnValidated = true;
+    let strMessage = ('You have ordered a') + size;
+    //validating the size argument to ensure they ordered a size we can sell
+    if(size != 'small' && size != 'medium' && size != 'large'){
+        //overwriting the message when the size isn't in the logic above
+        strMessage = ('you have ordered a size we do not sell:' + size);
+        blnValidated = false;
+    }
+    //if the size is valid
+    if(blnValidated){
+        //creating different oututs based on the drinks argument
+     switch(drink){
+        case 'cola':
+            strMessage += 'Coca-cola';
+        break;
+        case 'lemon':
+            strMessage += 'Schweppes';  
+        break;
+        case 'orange':
+            strMessage += 'you have ordered Tango';
+        break;
+        default:
+            //overwriting the message when the drink can't be sold
+            strMessage = ('we do not sell'+ drink);
+        break;
+        }
+    }
+    console.log(strMessage);
+}
+
+drinkOrder('cola','small');
+drinkOrder('lemon','medium')
+drinkOrder('orange','large')
+drinkOrder('coffee','huge');
