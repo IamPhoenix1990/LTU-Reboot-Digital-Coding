@@ -123,6 +123,7 @@ function calculator(num1,num2,operator){
     //declaring sum variable
     let sum;
     //switch statement for operator
+    //isNaN() function to validate
     if(isNaN(num1)){
         return 'Number1 needs to be a number';
     }
@@ -162,4 +163,3 @@ console.log(calculator('Zac',5,'+'));
 console.log(calculator(10,'Zac','+'));
 console.log(calculator(10,5,'Zac'));
 //NaN means not a number 
-//isNaN() function 
