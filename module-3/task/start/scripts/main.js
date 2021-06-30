@@ -189,3 +189,22 @@ function removeChar(strValue){
     
     
     console.log(removeChar('antidisestablishmentarianism'));
+
+    let arrRainbow = ['red','orange','yellow','green','blue','indigo','violet']
+    
+    //console.log(arrRainbow[0]);
+    //console.log(arrRainbow[3]);
+    //console.log(arrRainbow[6]);
+    //console.log(arrRainbow.length);
+
+    let objProduct = {
+        productName: 'Tinned Beans',
+        price: 0.99,
+        quantity:4,
+        inStock:true,
+        discountAmount:0,
+    };
+
+    // two ways to saying the same thing
+    console.log(objProduct.productName); // dot notation
+    console.log(objProduct['productName']); // bracket notation
