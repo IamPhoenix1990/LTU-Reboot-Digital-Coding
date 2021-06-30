@@ -164,6 +164,7 @@ function calculator(num1,num2,operator){
 //console.log(calculator(10,5,'Zac'));
 //NaN means not a number 
 
+//bonus task
 function removeChar(strValue){
 
     if(strValue.length < 4){
@@ -185,10 +186,9 @@ function removeChar(strValue){
     return strValue.substr(firstTrim,trimUpto);
     
     }
-    
-    
-    
-    console.log(removeChar('antidisestablishmentarianism'));
+
+    //console.log(removeChar('antidisestablishmentarianism'));
+
 
     let arrRainbow = ['red','orange','yellow','green','blue','indigo','violet']
     
@@ -198,13 +198,32 @@ function removeChar(strValue){
     //console.log(arrRainbow.length);
 
     let objProduct = {
-        productName: 'Tinned Beans',
+        productName:'Tinned Beans',
         price: 0.99,
         quantity:4,
         inStock:true,
         discountAmount:0,
     };
 
-    // two ways to saying the same thing
-    console.log(objProduct.productName); // dot notation
-    console.log(objProduct['productName']); // bracket notation
+    // two ways to access the object (any property)
+    //console.log(objProduct.productName); // dot notation
+    //console.log(objProduct['productName']); // bracket notation
+   
+    //changing object (come back to later)
+
+    objProduct['weight'] = 0.5;
+    console.log(objProduct);
+
+    //LOOPS (to count to 9 then stop)
+    for(counter=0; counter <10; counter++){ //Rare to not see counter ++ as that's going through one by one
+        console.log(counter);
+    }
+
+    // Loop with only odd numbers with logic
+    for(counter=0; counter <10; counter++){
+        if(counter % 2){
+            console.log(counter);
+
+        }
+    }
+    
