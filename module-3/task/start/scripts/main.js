@@ -190,7 +190,7 @@ function removeChar(strValue){
     //console.log(removeChar('antidisestablishmentarianism'));
 
 
-    let arrRainbow = ['red','orange','yellow','green','blue','indigo','violet']
+    let arrRainbow = ['red','orange','yellow','green','blue','indigo','violet'];
     
     //console.log(arrRainbow[0]);
     //console.log(arrRainbow[3]);
@@ -216,14 +216,42 @@ function removeChar(strValue){
 
     //LOOPS (to count to 9 then stop)
     for(counter=0; counter <10; counter++){ //Rare to not see counter ++ as that's going through one by one
-        console.log(counter);
+        //console.log(counter);
     }
 
     // Loop with only odd numbers with logic
     for(counter=0; counter <10; counter++){
         if(counter % 2){
-            console.log(counter);
+            //console.log(counter);
 
         }
     }
     
+    //word counter does not need to be used, can name variable as anything, devs usually use i
+    //for(counter=0; counter <arrRainbow.length; counter++){ 
+        let colour = arrRainbow[counter];
+    //console.log(counter + ' : ' + colour)
+
+
+for(counter = 0; counter <= 30; counter++){
+    if(counter % 3 == 0 && counter % 5 == 0){
+        console.log('FizzBuzz');
+    } else if (counter % 5 == 0) {
+        console.log('Buzz');
+    } else if (counter % 3 == 0) {
+        console.log('Fizz');
+    } else {
+        console.log(counter);
+    }
+}
+
+function outputTimesTable(multipleOf){
+    for(counter=1; counter <=12; counter++){
+    let sum = counter * 10;
+    console.log(sum);
+    }
+}
+
+for(multiplyer =1; multiplyer <=12; multiplyer++){
+outputTimesTable(multiplyer);
+}
