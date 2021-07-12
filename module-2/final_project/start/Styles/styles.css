@@ -1,0 +1,10 @@
+ul {
+    display: flex;
+}
+  
+  img {
+    max-height: 200px;
+    max-width: 200px;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
