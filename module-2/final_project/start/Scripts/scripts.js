@@ -11,12 +11,21 @@ for(counter=0; counter < arrButtons.length; counter++){
 
 function showHideImages(event){
     let animalFilter = event.target.getAttribute('animal');
-        console.log(animalFilter);
+        //console.log(animalFilter);
         for(counter=0; counter < arrImages.length; counter++){
             let currentImage = arrImages[counter];
-            console.log(currentImage);
-            
+            //console.log(currentImage);
+            currentImage.getElementsByClassName.display= 'none';{
+            let blnDisplay= false;
+            if(currentImage.classList.contains(animalFilter)){
+                blnDisplay= true;
+            }
+            if(animalFilter == 'all'){
+                blnDisplay= true;
+            }
+            if(blnDisplay){
+                currentImage.style.display= 'inline';
+            }
             
         }
-    
 }
